@@ -1,0 +1,27 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/startup">STARTUP WATCH</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+
+  <form class="slds-form--inline">
+    <div class="slds-form-element">
+      <label class="slds-form-element__label" for="sample1">見込み</label>
+      <div class="slds-form-element__control">
+        <input ng-change="computeNeeded()" class="slds-input slds-text-align--right" ng-model="startingEstimate" id="sample1">
+      </div>
+    </div>
+    <div class="slds-form-element">
+      <label class="slds-form-element__label">推奨額 (見込み×10)</label>
+      <div class="slds-form-element__control">
+        <span class="slds-form-element__static slds-input slds-text-align--right" style="width: 200px;">{{needed}}</span>
+      </div>
+    </div>
+    <button class="slds-button slds-button--brand slds-button--small" ng-click="requestFunding()">出資を依頼する</button>
+    <button class="slds-button slds-button--brand slds-button--small" ng-click="reset()">リセット</button>
+  </form>
+</div>

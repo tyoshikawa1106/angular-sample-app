@@ -20,5 +20,21 @@ angular.module("Controllers", ["Services"])
   ];
   $scope.remove = function(index) {
     $scope.items.splice(index, 1);
+  };
+}])
+// StartUpController
+.controller("StartUpController", ["$scope", function($scope){
+  $scope.startingEstimate = 0;
+  $scope.needed = 0;
+
+  $scope.computeNeeded = function() {
+    $scope.needed = $scope.startingEstimate * 10;
+  };
+  $scope.requestFunding = function() {
+    window.alert("もっと顧客を増やしてからにしてください");
+  };
+  $scope.reset = function() {
+    $scope.startingEstimate = 0;
+    $scope.needed = 0;
   }
 }]);
