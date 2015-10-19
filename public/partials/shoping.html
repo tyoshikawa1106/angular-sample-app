@@ -1,0 +1,48 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/shoping">Shoping Cart</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <h1 class="slds-text-heading--large slds-m-bottom--small">SHOPING CART</h1>
+  <div class="slds-scrollable--x">
+    <table class="slds-table slds-table--bordered">
+      <colgroup>
+        <col width="400px"></col>
+        <col width="200px"></col>
+        <col width="200px"></col>
+        <col width="200px"></col>
+        <col></col>
+      </colgroup>
+      <thead>
+        <th>TITLE</th>
+        <th>QUANTITY</th>
+        <th>PRICE</th>
+        <th>TOTAL PRICE</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in items">
+          <td>
+            <span>{{item.title}}</span>
+          </td>
+          <td>
+            <input class="slds-input slds-text-align--right" ng-model="item.quantity">
+          </td>
+          <td class="slds-text-align--right">
+            <span>{{item.price | currency}}</span>
+          </td>
+          <td class="slds-text-align--right">
+            <span>{{item.price * item.quantity | currency}}</span>
+          </td>
+          <td class="slds-text-align--center">
+            <button class="slds-button slds-button--brand" ng-click="remove($index)">DELETE</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

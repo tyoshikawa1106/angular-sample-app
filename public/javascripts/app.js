@@ -11,6 +11,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "BindingController",
     templateUrl : "/partials/binding.html"
   }).
+  when("/shoping", {
+    controller : "ShopingController",
+    templateUrl : "/partials/shoping.html"
+  }).
   otherwise({
     redirectTo: "/"
   });
