@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>AngularJS Sample</title>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheets/style.css"></link>
+    <link rel="stylesheet" href="vendor/SLDS092/assets/styles/salesforce-lightning-design-system.min.css"></link>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+  </head>
+  <body ng-app="SampleApp">
+    <div class="slds">
+      <header class="site-masthead slds-grid slds-page-header slds-theme--inverse">
+        <div class="slds-media__body slds-p-top--x-small">
+          <h1 class="slds-text-heading--large">AngularJS Sample</h1>
+        </div>
+      </header>
+      <nav role="navigation" class="slds-p-around--x-small">
+        <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+        <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+          <li class="slds-list__item slds-text-heading--label"><a href="#/">> TOP</a></li>
+        </ol>
+      </nav>
+      <div ng-view></div>
+    </div>
+    <!-- javascript -->
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/controllers.js"></script>
+    <script src="javascripts/services.js"></script>
+  </body>
+</html>
