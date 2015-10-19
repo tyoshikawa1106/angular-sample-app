@@ -1,0 +1,19 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/albumList">ALBUM LIST</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <div class="slds-scrollable--x">
+    <table class="slds-table slds-table--bordered">
+      <tr ng-repeat="track in album">
+        <td>{{$index + 1}}</td>
+        <td>{{track.name}}</td>
+        <td>{{track.duration}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

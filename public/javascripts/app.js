@@ -27,6 +27,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "StudentDetailController",
     templateUrl : "/partials/student.html"
   }).
+  when("/albumList", {
+    controller : "AlbumListController",
+    templateUrl : "/partials/albumList.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

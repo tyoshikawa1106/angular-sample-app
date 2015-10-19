@@ -53,4 +53,12 @@ angular.module("Controllers", ["Services"])
 // StudentDetailController
 .controller("StudentDetailController", ["$scope", "$routeParams", function($scope, $routeParams){
   $scope.studentId = $routeParams.id;
+}])
+// AlbumListController
+.controller("AlbumListController", ["$scope", function($scope){
+  $scope.album = [
+    {name: "サウスウェスト・セレナーデ", duration: "2:34"},
+    {name: "ノーザン・ライト・ワルツ", duration: "3:21"},
+    {name: "イースタン・タンゴ", duration: "17:45"}
+  ];
 }]);
