@@ -1,0 +1,18 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/students">STUDENTS LIST</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <ul class="slds-list--vertical slds-has-dividers">
+    <li class="slds-list__item" ng-repeat="student in students">
+      <a href="/student/view/{{student.id}}">{{student.name}}</a>
+    </li>
+  </ul>
+  <div class="slds-m-top--small">
+    <button class="slds-button slds-button--brand slds-button--small" ng-click="insertTom()">追加</button>
+  </div>
+</div>

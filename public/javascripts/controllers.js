@@ -37,4 +37,16 @@ angular.module("Controllers", ["Services"])
     $scope.startingEstimate = 0;
     $scope.needed = 0;
   }
+}])
+// StudentListController
+.controller("StudentListController", ["$scope", function($scope){
+  $scope.students = [
+    {name: "メアリー・コントラリー", id:"1"},
+    {name: "ジャック・スプラット", id:"2"},
+    {name: "ジル・ヒル", id:"3"}
+  ];
+
+  $scope.insertTom = function() {
+    $scope.students.splice(1, 0, {name: "トム・サム", id:"4"});
+  };
 }]);
