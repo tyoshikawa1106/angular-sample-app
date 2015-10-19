@@ -3,6 +3,14 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "HomeController",
     templateUrl : "/partials/home.html"
   }).
+  when("/hello", {
+    controller : "HelloController",
+    templateUrl : "/partials/hello.html"
+  }).
+  when("/binding", {
+    controller : "BindingController",
+    templateUrl : "/partials/binding.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

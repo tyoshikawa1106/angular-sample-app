@@ -1,0 +1,14 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/binding">Data Binding</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <input ng-model="greeting.text" class="slds-input">
+  <div class="slds-m-top--small">
+    <p class="slds-text-heading--small">{{greeting.text}}, World</p>
+  </div>
+</div>
