@@ -3,16 +3,10 @@
   <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
     <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
     <li class="slds-list__item slds-text-heading--label"><a href="#/students">STUDENTS LIST</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/students/view/{{studentId}}">{{studentId}}</a></li>
   </ol>
 </nav>
 
 <div class="slds-p-around--large">
-  <ul class="slds-list--vertical slds-has-dividers">
-    <li class="slds-list__item" ng-repeat="student in students">
-      <a href="#/students/view/{{student.id}}">{{student.name}}</a>
-    </li>
-  </ul>
-  <div class="slds-m-top--small">
-    <button class="slds-button slds-button--brand slds-button--small" ng-click="insertTom()">追加</button>
-  </div>
+  <p class="slds-text-heading--large">{{studentId}}</p>
 </div>

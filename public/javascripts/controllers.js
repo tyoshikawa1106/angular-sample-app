@@ -49,4 +49,8 @@ angular.module("Controllers", ["Services"])
   $scope.insertTom = function() {
     $scope.students.splice(1, 0, {name: "トム・サム", id:"4"});
   };
+}])
+// StudentDetailController
+.controller("StudentDetailController", ["$scope", "$routeParams", function($scope, $routeParams){
+  $scope.studentId = $routeParams.id;
 }]);
