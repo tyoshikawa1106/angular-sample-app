@@ -71,4 +71,15 @@ angular.module("Controllers", ["Services"])
   $scope.stun = function() {
     $scope.isDisabled = true;
   }
+}])
+// ValidationStateController
+.controller("ValidationStateController", ["$scope", function($scope){
+  $scope.email = {isError: false};
+  $scope.emailBtnClick = function() {
+    $scope.email.isError = !$scope.email.isError;
+  };
+  $scope.password = {isError: false};
+  $scope.passwordBtnClick = function() {
+    $scope.password.isError = !$scope.password.isError;
+  };
 }]);

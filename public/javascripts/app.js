@@ -35,6 +35,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "DeathrayMenuController",
     templateUrl : "/partials/deathRayMenu.html"
   }).
+  when("/validationState", {
+    controller : "ValidationStateController",
+    templateUrl : "/partials/validationState.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

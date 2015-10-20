@@ -1,0 +1,32 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/validationState">VALIDATION STATE</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <form class="slds-form--stacked">
+    <div class="slds-m-bottom--small">
+      <button class="slds-button slds-button--brand slds-button--small" ng-click="emailBtnClick()">Email Demo</button>
+      <button class="slds-button slds-button--brand slds-button--small" ng-click="passwordBtnClick()">Password Demo</button>
+    </div>
+    <!-- Email -->
+    <div class="slds-form-element slds-is-required" ng-class="{'slds-has-error':email.isError}">
+      <label class="slds-form-element__label" for="email">Email</label>
+      <div class="slds-form-element__control">
+        <input id="email" class="slds-input" type="email" aria-describedby="errEmail" />
+        <span id="errEmail" class="slds-form-element__help" ng-show="email.isError">This field is required</span>
+      </div>
+    </div>
+    <!-- Password -->
+    <div class="slds-form-element slds-is-required" ng-class="{'slds-has-error':password.isError}">
+      <label class="slds-form-element__label" for="password">Password</label>
+      <div class="slds-form-element__control">
+        <input id="password" class="slds-input" type="password" aria-describedby="errPassword" />
+        <span id="errPassword" class="slds-form-element__help" ng-show="password.isError">This field is required</span>
+      </div>
+    </div>
+  </form>
+</div>
