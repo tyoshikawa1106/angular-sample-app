@@ -39,6 +39,14 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "ValidationStateController",
     templateUrl : "/partials/validationState.html"
   }).
+  when("/selectedRow", {
+    controller : "SelectedRowController",
+    templateUrl : "/partials/selectedRow.html"
+  }).
+  when("/imageView", {
+    controller : "ImageViewController",
+    templateUrl : "/partials/imageView.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

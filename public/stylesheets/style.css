@@ -10,3 +10,7 @@ body {
 .menu-disabled-true {
   color: gray;
 }
+
+.selected {
+  background-color: lightgreen;
+}

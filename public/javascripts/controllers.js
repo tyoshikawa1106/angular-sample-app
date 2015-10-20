@@ -82,4 +82,30 @@ angular.module("Controllers", ["Services"])
   $scope.passwordBtnClick = function() {
     $scope.password.isError = !$scope.password.isError;
   };
+}])
+// SelectedRowController
+.controller("SelectedRowController", ["$scope", function($scope){
+  $scope.directory = [
+    {name: "ハンサム・ヘファー", cuisine: "BBQ"},
+    {name: "グリーンズ・グリーン・グリーンズ", cuisine: "サラダ"},
+    {name: "ハウス・オブ・ファイン・フィッシュ", cuisine: "シーフード"}
+  ];
+
+  $scope.selectRestaurant = function(row) {
+    $scope.selectedRow = row;
+  }
+}])
+// ImageViewController
+.controller("ImageViewController", ["$scope", function($scope){
+  $scope.selectImage = "Saasy.jpg";
+  $scope.url = "http://www.salesforce.com/";
+
+  $scope.clickSaasy = function() {
+    $scope.selectImage = "Saasy.jpg";
+    $scope.url = "http://www.salesforce.com/";
+  };
+  $scope.clickChatty = function() {
+    $scope.selectImage = "Chatty.jpg";
+    $scope.url = "http://www.salesforce.com/jp";
+  };
 }]);

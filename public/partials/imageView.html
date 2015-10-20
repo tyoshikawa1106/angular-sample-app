@@ -1,0 +1,30 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/imageView">IMAGE VIEW</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <fieldset class="slds-form-element">
+    <legend class="slds-form-element__label slds-form-element__label--top">Select Image Type</legend>
+    <div class="slds-form-element__control">
+      <label class="slds-radio" for="saasy">
+        <input type="radio" name="options" id="saasy" ng-click="clickSaasy()" checked />
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">Saasy</span>
+      </label>
+      <label class="slds-radio" for="chatty">
+        <input type="radio" name="options" id="chatty" ng-click="clickChatty()" />
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">Chatty</span>
+      </label>
+    </div>
+  </fieldset>
+  <hr/>
+  <img ng-src="/images/{{selectImage}}" style="width: 100px; height: 100px;" />
+  <div>
+    <a href="{{url}}" target="_blank">{{url}}</a>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/selectedRow">SELECTED ROW</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <table>
+    <tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class="{'selected': $index==selectedRow}">
+      <td class="slds-p-around--small">{{restaurant.name}}</td>
+      <td class="slds-p-around--small">{{restaurant.cuisine}}</td>
+    </tr>
+  </table>
+</div>
