@@ -61,4 +61,14 @@ angular.module("Controllers", ["Services"])
     {name: "ノーザン・ライト・ワルツ", duration: "3:21"},
     {name: "イースタン・タンゴ", duration: "17:45"}
   ];
+}])
+// DeathrayMenuController
+.controller("DeathrayMenuController", ["$scope", function($scope){
+  $scope.menuState = {show: false};
+  $scope.toggleMenu = function() {
+    $scope.menuState.show = !$scope.menuState.show;
+  };
+  $scope.stun = function() {
+    $scope.isDisabled = true;
+  }
 }]);

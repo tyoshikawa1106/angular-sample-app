@@ -1,0 +1,18 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/deathRayMenu">DEATHRAY MENU</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <div class="slds-m-bottom--small">
+    <button class="slds-button slds-button--brand slds-button--small" ng-click="toggleMenu()">メニューをトグル</button>
+  </div>
+  <ul ng-show="menuState.show">
+    <li class="menu-disabled-{{isDisabled}}" ng-click="stun()">気絶</li>
+    <li ng-click="disintegrate()">崩壊</li>
+    <li ng-click="erase()">歴史から消去</li>
+  </ul>
+</div>

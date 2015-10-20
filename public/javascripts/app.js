@@ -31,6 +31,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "AlbumListController",
     templateUrl : "/partials/albumList.html"
   }).
+  when("/deathRayMenu", {
+    controller : "DeathrayMenuController",
+    templateUrl : "/partials/deathRayMenu.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

@@ -6,3 +6,7 @@ body {
   background-color: rgb(244, 246, 249) !important;
   min-height: 100%;
 }
+
+.menu-disabled-true {
+  color: gray;
+}
