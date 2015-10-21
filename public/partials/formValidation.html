@@ -1,0 +1,46 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/formValidation">FORM VALIDATION</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <form name="addUserForm" class="slds-form--stacked">
+    <fieldset class="slds-form--compound">
+      <legend class="slds-form-element__label">登録フォーム</legend>
+      <div class="form-element__group">
+        <div class="slds-form-element__row">
+          <label class="slds-form-element__control slds-size--1-of-4">
+            <span class="slds-form-element__helper">ファーストネーム</span>
+            <input class="slds-input" type="text" ng-model="user.first" required />
+          </label>
+          <label class="slds-form-element__control slds-size--1-of-4">
+            <span class="slds-form-element__helper">ラストネーム</span>
+            <input class="slds-input" type="text" ng-model="user.last" required />
+          </label>
+        </div>
+        <div class="slds-form-element__row">
+          <label class="slds-form-element__control slds-size--1-of-2">
+            <span class="slds-form-element__helper">メールアドレス</span>
+            <input class="slds-input" type="email" ng-model="user.email" required />
+          </label>
+        </div>
+        <div class="slds-form-element__row">
+          <label class="slds-form-element__control slds-size--1-of-2">
+            <span class="slds-form-element__helper">年齢</span>
+            <input class="slds-input" type="number"
+                    ng-model="user.age"
+                    ng-maxlength="3"
+                    ng-minlength="1"
+                    ng-max="100"
+                    ng-min="0">
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <button class="slds-button slds-button--brand" ng-click="addUser()" ng-disabled="!addUserForm.$valid">送信</button>
+    <div ng-show="message" class="slds-m-top--small">{{message}}</div>
+  </form>
+</div>

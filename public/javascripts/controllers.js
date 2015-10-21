@@ -143,4 +143,11 @@ angular.module("Controllers", ["Services"])
   $scope.clickfocused = function() {
     $scope.message.text = "フォーカスありのボタンがクリックされました";
   }
+}])
+// FormValidationController
+.controller("FormValidationController", ["$scope", function($scope){
+  $scope.message = "";
+  $scope.addUser = function() {
+    $scope.message = $scope.user.first + "さんが登録されました！";
+  };
 }]);

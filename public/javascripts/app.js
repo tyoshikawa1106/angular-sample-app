@@ -55,6 +55,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute", "Directives"]).config(["$
     controller : "FocusDirectiveController",
     templateUrl : "/partials/focusDirective.html"
   }).
+  when("/formValidation", {
+    controller : "FormValidationController",
+    templateUrl : "/partials/formValidation.html"
+  }).
   otherwise({
     redirectTo: "/"
   });
