@@ -46,8 +46,8 @@
     </table>
   </div>
   <div class="slds-m-top--small">
-    <div>小計：{{totalCart() | currency}}</div>
+    <div>小計：{{bill.total | currency}}</div>
     <div>値引き：{{bill.discount | currency}}</div>
-    <div>合計：{{subtotal() | currency}}</div>
+    <div>合計：{{bill.subtotal | currency}}</div>
   </div>
 </div>
