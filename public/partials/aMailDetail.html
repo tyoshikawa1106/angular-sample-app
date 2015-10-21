@@ -1,0 +1,52 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/aMailList">AMAIL LIST</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/aMailList/view/{{message.id}}">{{message.subject}}</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <div>
+    <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+      <thead>
+        <tr class="slds-text-heading--label">
+          <th scope="col">
+            <span class="slds-truncate">件名</span>
+          </th>
+          <th scope="col">
+            <span class="slds-truncate">送信者</span>
+          </th>
+          <th scope="col">
+            <span class="slds-truncate">日時</span>
+          </th>
+          <th scope="col">
+            <span class="slds-truncate">宛先</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="slds-hint-parent">
+          <td data-label="件名：">
+            <span class="slds-truncate">{{message.subject}}</span>
+          </td>
+          <td data-label="送信者：">
+            <span class="slds-truncate">{{message.sender}}</span>
+          </td>
+          <td data-label="日時：">
+            <span class="slds-truncate">{{message.date}}</span>
+          </td>
+          <td data-label="宛先：">
+            <span ng-repeat="recipient in message.recipients">{{recipient}}</span>          
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="slds-box slds-box slds-theme--shade slds-theme--alert-texture slds-m-around--small">
+    <p>{{message.message}}</p>
+    <a href="#/">メッセージのリストに戻る</a>
+  </div>
+</div>

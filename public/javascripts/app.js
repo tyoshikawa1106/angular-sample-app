@@ -59,6 +59,14 @@ angular.module("SampleApp", ["Controllers", "ngRoute", "Directives"]).config(["$
     controller : "FormValidationController",
     templateUrl : "/partials/formValidation.html"
   }).
+  when("/aMailList", {
+    controller : "AMailListController",
+    templateUrl : "/partials/aMailList.html"
+  }).
+  when("/aMailList/view/:id", {
+    controller : "AMailDetailController",
+    templateUrl : "/partials/aMailDetail.html"
+  }).
   otherwise({
     redirectTo: "/"
   });

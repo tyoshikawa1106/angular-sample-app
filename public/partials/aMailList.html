@@ -1,0 +1,24 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/aMailList">AMAIL LIST</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <div class="slds-scrollable--x">
+    <table class="slds-table slds-table--bordered">
+      <tr>
+        <th><strong>送信者</strong></th>
+        <th><strong>件名</strong></th>
+        <th><strong>日時</strong></th>
+      </tr>
+      <tr ng-repeat="message in messages">
+        <td>{{message.sender}}</td>
+        <td><a href="#/aMailList/view/{{message.id}}">{{message.subject}}</a></td>
+        <td>{{message.date}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

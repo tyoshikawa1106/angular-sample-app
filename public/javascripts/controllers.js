@@ -150,4 +150,12 @@ angular.module("Controllers", ["Services"])
   $scope.addUser = function() {
     $scope.message = $scope.user.first + "さんが登録されました！";
   };
+}])
+// AMailListController
+.controller("AMailListController", ["$scope", "MessageData", function($scope, MessageData){
+  $scope.messages = MessageData.all();
+}])
+// AMailDetailController
+.controller("AMailDetailController", ["$scope", "MessageData", "$routeParams", function($scope, MessageData, $routeParams){
+  $scope.message = MessageData.get($routeParams.id);
 }]);
