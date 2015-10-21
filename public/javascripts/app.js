@@ -1,4 +1,4 @@
-angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider", function($routeProvider){
+angular.module("SampleApp", ["Controllers", "ngRoute", "Directives"]).config(["$routeProvider", function($routeProvider){
   $routeProvider.when("/", {
     controller : "HomeController",
     templateUrl : "/partials/home.html"
@@ -50,6 +50,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
   when("/orderDiscountWatch", {
     controller : "OrderDiscountWatchController",
     templateUrl : "/partials/orderDiscountWatch.html"
+  }).
+  when("/focusDirective", {
+    controller : "FocusDirectiveController",
+    templateUrl : "/partials/focusDirective.html"
   }).
   otherwise({
     redirectTo: "/"

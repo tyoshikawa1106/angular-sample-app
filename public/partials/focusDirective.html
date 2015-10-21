@@ -1,0 +1,13 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/focusDirective">FOCUS DIRECTIVE</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <button ng-click="clickUnfocused()">フォーカスなし</button>
+  <button ngbk-focus ng-click="clickfocused()">フォーカスあり</button>
+  <div>{{message.text}}</div>
+</div>

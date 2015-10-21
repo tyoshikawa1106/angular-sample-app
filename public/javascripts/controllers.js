@@ -133,4 +133,14 @@ angular.module("Controllers", ["Services"])
   };
 
   $scope.$watch("items", calculateTotals, true);
+}])
+// FocusDirectiveController
+.controller("FocusDirectiveController", ["$scope", function($scope){
+  $scope.message = { text: "クリックされていません" };
+  $scope.clickUnfocused = function() {
+    $scope.message.text = "フォーカスなしのボタンがクリックされました";
+  };
+  $scope.clickfocused = function() {
+    $scope.message.text = "フォーカスありのボタンがクリックされました";
+  }
 }]);
