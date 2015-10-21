@@ -1,0 +1,40 @@
+<nav role="navigation" class="slds-p-around--x-small">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="#/">TOP</a></li>
+    <li class="slds-list__item slds-text-heading--label"><a href="#/todoLocalStorage">TODO LOCALSTORAGE</a></li>
+  </ol>
+</nav>
+
+<div class="slds-p-around--large">
+  <div class="slds-p-around--large">
+    <h1 class="slds-text-heading--large slds-p-bottom--medium">{{title}}</h1>
+    <button ng-click="save()" class="slds-button slds-button--brand slds-button--small">保存</button>
+    <button ng-click="load()" class="slds-button slds-button--brand slds-button--small">呼び出し</button>
+    <button ng-click="remove()" class="slds-button slds-button--brand slds-button--small">削除</button>
+    <div add-todo todos="todos" class="slds-p-top--medium"></div>
+    <div class="slds-p-top--medium">
+      <label class="slds-radio">
+        <input type="radio" ng-model="doneType" value="line">
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">取り消し線</span>
+      </label>
+      <label class="slds-radio">
+        <input type="radio" ng-model="doneType" value="hide">
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">非表示</span>
+      </label>
+    </div>
+    <div class="slds-p-top--medium slds-form-element">
+      <ul ng-class="doneType">
+        <li ng-repeat="todo in todos" ng-class="{ done : todo.done }">
+          <label class="slds-checkbox">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="slds-checkbox--faux"></span>
+            <span class="slds-form-element__label">{{todo.text}}</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

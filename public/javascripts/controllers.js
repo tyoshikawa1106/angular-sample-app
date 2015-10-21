@@ -158,4 +158,20 @@ angular.module("Controllers", ["Services"])
 // AMailDetailController
 .controller("AMailDetailController", ["$scope", "MessageData", "$routeParams", function($scope, MessageData, $routeParams){
   $scope.message = MessageData.get($routeParams.id);
+}])
+// ToDoController
+.controller("todoLocalStorageController", ["$scope", "LocalStorage", function($scope, LocalStorage){
+  $scope.title = "ToDo";
+  $scope.todos = [];
+  $scope.doneType = "line";
+  $scope.save = function() {
+    LocalStorage.save("todos", $scope.todos);
+  };
+  $scope.load = function() {
+    $scope.todos = LocalStorage.get("todos");
+  };
+  $scope.remove = function() {
+    LocalStorage.remove("todos");
+    $scope.todos = [];
+  };
 }]);

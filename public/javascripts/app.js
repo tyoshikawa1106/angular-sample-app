@@ -67,6 +67,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute", "Directives"]).config(["$
     controller : "AMailDetailController",
     templateUrl : "/partials/aMailDetail.html"
   }).
+  when("/todoLocalStorage", {
+    controller : "todoLocalStorageController",
+    templateUrl : "/partials/todoLocalStorage.html"
+  }).
   otherwise({
     redirectTo: "/"
   });
