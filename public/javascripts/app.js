@@ -47,6 +47,10 @@ angular.module("SampleApp", ["Controllers", "ngRoute"]).config(["$routeProvider"
     controller : "ImageViewController",
     templateUrl : "/partials/imageView.html"
   }).
+  when("/orderDiscountWatch", {
+    controller : "OrderDiscountWatchController",
+    templateUrl : "/partials/orderDiscountWatch.html"
+  }).
   otherwise({
     redirectTo: "/"
   });
