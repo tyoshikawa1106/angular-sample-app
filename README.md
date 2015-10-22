@@ -31,7 +31,7 @@
 <img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20151022/20151022163824.png" />
 
 ## IMAGE VIEW
-<img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20151022/20151022163824.png" />
+<img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20151022/20151022164644.png" />
 
 ## ORDER DISCOUNT WATCH
 <img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20151022/20151022164007.png" />
