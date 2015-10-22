@@ -1,5 +1,7 @@
 # angular-sample-app
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tyoshikawa1106/angular-sample-app)
+
 ## Home
 <img src="http://f.st-hatena.com/images/fotolife/t/tyoshikawa1106/20151022/20151022162956.png" />
 
